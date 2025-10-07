@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cheezer’s Hot Wings | Order Now</title>
+<style>
+body {
+  background-color: #ffe6f2;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: #ff9ecb;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 15px;
+  font-weight: 600;
+  font-size: 16px;
+}
+nav a:hover {
+  color: #ffe6f2;
+  text-decoration: underline;
+}
+.container {
+  background-color: white;
+  width: 420px;
+  margin: 60px auto;
+  padding: 25px 35px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(255, 153, 204, 0.4);
+}
+h1 {
+  color: #ff4fa3;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+label, select, input {
+  display: block;
+  margin: 10px auto;
+  font-size: 15px;
+  text-align: center;
+}
+input, select {
+  border: 2px solid #ffb6d9;
+  border-radius: 10px;
+  padding: 8px;
+  width: 80%;
+}
+button {
+  background-color: #ff70b8;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}
+button:hover {
+  background-color: #ff92c9;
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="order.html">Order Now</a>
+  <a href="contact.html">Contact Us</a>
+</nav>
+
+<div class="container">
+  <h1>🍗 Cheezer’s Hot Wings Ordering Form</h1>
+  <form id="orderForm">
+    <label>Name:</label>
+    <input type="text" id="name" required>
+
+    <label>Flavor:</label>
+    <select id="flavor">
+      <option value="150">Buffalo - ₱150</option>
+      <option value="160">Honey Garlic - ₱160</option>
+      <option value="170">Korean Soy - ₱170</option>
+      <option value="180">Garlic Parmesan - ₱180</option>
+    </select>
+
+    <label>Sauce:</label>
+    <select id="sauce">
+      <option value="20">Ranch - ₱20</option>
+      <option value="25">Sour Cream - ₱25</option>
+      <option value="15">Barbecue - ₱15</option>
+    </select>
+
+    <label>Drink:</label>
+    <select id="drink">
+      <option value="30">Coke - ₱30</option>
+      <option value="35">Iced Tea - ₱35</option>
+      <option value="25">Water - ₱25</option>
+    </select>
+
+    <button type="button" onclick="submitOrder()">Submit Order</button>
+  </form>
+</div>
+
+<script>
+function submitOrder() {
+  let name = document.getElementById('name').value;
+  let flavor = parseFloat(document.getElementById('flavor').value);
+  let sauce = parseFloat(document.getElementById('sauce').value);
+  let drink = parseFloat(document.getElementById('drink').value);
+  let total = flavor + sauce + drink;
+  alert("Order completed! " + name + ", your total is ₱" + total.toFixed(2));
+}
+</script>
+</body>
+</html>

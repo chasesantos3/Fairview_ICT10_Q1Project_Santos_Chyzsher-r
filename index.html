@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>𖦹 ⋆ Cheezer's Hot Wings: My Profile ⋆ 𖦹</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="active">Home</a>
+    <a href="order.html">Order Now</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <h1>✿ Welcome to Cheezer’s Hot Wings ✿</h1>
+  <p>Be cute, be spicy! 🌸</p>
+
+  <label>Name:</label><br>
+  <input type="text" id="name"><br><br>
+
+  <label>Age:</label><br>
+  <input type="number" id="age"><br><br>
+
+  <label>School:</label><br>
+  <input type="text" id="school"><br><br>
+
+  <button py-click="generate_message()">Generate Profile</button>
+
+  <div id="output"></div>
+
+  
+
+  <py-script src="main.py"></py-script>
+</body>
+</html>
